@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url('/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    background-color: #121620;
+    font-family: 'JetBrainsMono', monospace;
+    color: #B7CADA;
+    max-width: 900px;
+    width: 90%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    padding: 12px 0;
+}
+
+a {
+    color: #5C70D1;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.contact ul {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.contact a {
+    color: #AF6751;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section.about h2 {
+    color: #7AC3DC;
+}
+
+section.projects h2 {
+    color: #B38C51;
+}
+
+section.tech h2 {
+    color: #ED515A;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    h2,
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    .contact ul {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.5rem;
+    }
+
+    section#about,
+    section#projects,
+    section#tech,
+    section#contact {
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    footer {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
